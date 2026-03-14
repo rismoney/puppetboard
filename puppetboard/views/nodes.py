@@ -71,7 +71,8 @@ def nodes(env):
         stream_template('nodes.html',
                         nodes=nodes,
                         envs=envs,
-                        current_env=env)))
+                        current_env=env,
+                        status=status_arg)))
 
 
 @app.route('/node/<node_name>', defaults={'env': app.config['DEFAULT_ENVIRONMENT']})
